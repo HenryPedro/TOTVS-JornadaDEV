@@ -3,13 +3,13 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/badge/Stack-Back--end-8E44AD?style=for-the-badge" alt="Stack">
-  <img src="https://img.shields.io/badge/Paradigma-xBase%20%7C%20Orientado%20a%20Objetos-orange?style=for-the-badge" alt="Paradigma">
-  <img src="https://img.shields.io/badge/Projeto%20Final-ISO%209001%20(SIGACOM)-green?style=for-the-badge" alt="Projeto Final">
+  <img src="https://img.shields.io/badge/Ecossistema-TOTVS-009494?style=for-the-badge" alt="Ecossistema">
+  <img src="https://img.shields.io/badge/Paradigma-Harbour%20%7C%20ADVPL-orange?style=for-the-badge" alt="Paradigma">
 </p>
 
 Repositório central de códigos, laboratórios de lógica e projetos práticos desenvolvidos durante a minha formação na **JornadaDEV do programa Start+ da TOTVS**. 
 
-A filosofia desta jornada descarta avaliações teóricas tradicionais e foca exclusivamente em **Prova de Trabalho (Proof of Work)**, culminando no desenvolvimento de uma funcionalidade real, integrada e aderente às regras de mercado do maior ERP da América Latina.
+A filosofia desta jornada descarta avaliações teóricas tradicionais e foca exclusivamente em **Prova de Trabalho (Proof of Work)**, culminando no desenvolvimento de uma aplicação prática aderente às regras de mercado do maior ERP da América Latina.
 
 ---
 
@@ -25,16 +25,9 @@ O ecossistema que estou dominando nesta jornada possui uma árvore genealógica 
 
 ---
 
-## 🏗️ O Projeto Final (TCC) — Cenário Real ISO 9001
+## 🏗️ O Projeto Final (TCC)
 
-O encerramento da jornada consiste no desenvolvimento do zero de um sistema de gestão de qualidade para uma operação industrial real: **Controle de Não Conformidades na Entrada de Materiais (Indústria XYZ)**, atendendo aos critérios rigorosos de auditoria da certificação **ISO 9001**.
-
-A aplicação prática dentro do ambiente Protheus engloba:
-*   **Dicionário de Dados Customizado:** Modelagem e criação de tabelas e campos customizados manipulando diretamente as tabelas de sistema do Protheus (**SX2** e **SX3**).
-*   **Persistência e Operações (CRUD):** Construção de rotinas nativas de Back-end para cadastro, consulta, alteração e exclusão de fornecimentos e ocorrências de falhas.
-*   **Integração com ERP (SIGACOM):** Criação e acoplamento de menus customizados dentro do módulo oficial de **Compras**, garantindo a usabilidade do usuário final.
-*   **Gatilhos e Validações de Negócio:** Desenvolvimento de regras restritivas em código para travar inconsistências (ex: bloqueio de registros sem amarração de fornecedor válido).
-*   **Business Intelligence / Relatório Gerencial:** Construção de relatórios estruturados para tomada de decisão e rastreabilidade das não conformidades.
+O encerramento da jornada consistirá no desenvolvimento de um projeto prático final (TCC) focado em resolver cenários reais corporativos, aplicando de forma integrada todo o conhecimento adquirido ao longo da trilha conforme a orientação dos instrutores.
 
 ---
 
