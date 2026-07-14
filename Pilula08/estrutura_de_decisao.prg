@@ -1,6 +1,6 @@
 PROCEDURE Main()
-    LOCAL nNota := 8 // Ou o valor que você deseja testar
-
+    LOCAL nNota := 8 
+    
     IF nNota > 7
         QOut("Aprovado: MB")
     ELSEIF nNota >= 5
