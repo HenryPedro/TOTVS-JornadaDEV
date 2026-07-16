@@ -23,19 +23,12 @@ Fim
 ## Nível 2: Detalhamento
 
 ```text
-Algoritmo Caixa_Supermercado_Nivel2
-Var
-    subtotal, preco_item, total_pagar : Real
-    tem_fidelidade : Caractere
-    mais_itens : Caractere
-
 Inicio
-    // --- DETALHAMENTO DO PASSO 1: Registro e Subtotal ---
     subtotal <- 0
     mais_itens <- "S"
     
     Enquanto (mais_itens = "S" ou mais_itens = "s") Faça
-        Escreva("Digite o preço do item: R\$ ")
+        Escreva("Digite o preço do item: R$ ")
         Leia(preco_item)
         subtotal <- subtotal + preco_item
         
@@ -43,17 +36,16 @@ Inicio
         Leia(mais_itens)
     FimEnquanto
     
-    Escreva("Subtotal acumulado: R\$ ", subtotal)
+    Escreva("Subtotal acumulado: R$ ", subtotal)
     
-    // --- DETALHAMENTO DO PASSO 2: Validação do Desconto ---
     Escreva("O cliente possui cartão fidelidade? (S/N): ")
     Leia(tem_fidelidade)
     
     Se (tem_fidelidade = "S" ou tem_fidelidade = "s") Entao
-        total_pagar <- subtotal * 0.95  // Multiplicar por 0.95 deduz 5%
+        total_pagar <- subtotal * 0.95 
     Senao
-        total_pagar <- subtotal         // Mantém o valor original do subtotal
-    FimSe
+        total_pagar <- subtotal        
+    Fim
     
     // --- DETALHAMENTO DO PASSO 3: Exibição do Resultado ---
     Escreva("===============================")
