@@ -41,4 +41,5 @@ Function Main()
       QOut("Valor Total com Dependentes: R$ " + AllTrim(Str(nValTotal)))
  EndIf
 
+Inkey(0)
 Return Nil
