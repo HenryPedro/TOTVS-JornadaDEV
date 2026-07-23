@@ -1,72 +1,72 @@
-PROCEDURE Main()
+Function Main()
+   Local nNum1 := 0
+   Local nNum2 := 0
+   Local cOperacao := ""
+   Local uResultado := Nil
 
-    Local nNum1      := 0
-    Local nNum2      := 0
-    Local cOperacao  := ""
-    Local uResultado := NIL
+   nNum1 := LerNumero("Digite o primeiro numero: ")
+   cOperacao := LerOperacao()
 
-    nNum1     := LerNumero("Digite o primeiro numero: ")
-    cOperacao := LerOperacao()
+   If cOperacao != "R"
+      nNum2 := LerNumero("Digite o segundo numero: ")
+   Endif
 
-    IF cOperacao != "R"
-        nNum2 := LerNumero("Digite o segundo numero: ")
-    ENDIF
+   uResultado := Calcular(nNum1, nNum2, cOperacao)
+   MostrarResultado(uResultado)
 
-    uResultado := Calcular(nNum1, nNum2, cOperacao)
+Return Nil
 
-    MostrarResultado(uResultado)
-RETURN
+Function LerNumero(cMensagem)
+   Local cInput := ""
 
-FUNCTION LerNumero(cMensagem)
-    Local cInput := ""
-    ACCEPT cMensagem TO cInput
-RETURN Val(cInput)
+   Accept cMensagem To cInput
 
-FUNCTION LerOperacao()
-    Local cOp := ""
-    ACCEPT "Digite a operacao (+, -, *, /, ^, R): " TO cOp
-RETURN Upper(AllTrim(cOp))
+Return Val(cInput)
 
-FUNCTION Calcular(n1, n2, cOp)
-    Local nResultado := 0
+Function LerOperacao()
+   Local cOp := ""
 
-    DO CASE
-        CASE cOp == "+"
-            nResultado := n1 + n2
+   Accept "Digite a operacao (+, -, *, /, ^, R): " To cOp
 
-        CASE cOp == "-"
-            nResultado := n1 - n2
+Return Upper(Alltrim(cOp))
 
-        CASE cOp == "*"
-            nResultado := n1 * n2
+Function Calcular(n1, n2, cOp)
+   Local nResultado := 0
 
-        CASE cOp == "/"
-            IF n2 == 0
-                RETURN .F.
-            ENDIF
-            nResultado := n1 / n2
+   Do Case
+   Case cOp == "+"
+      nResultado := n1 + n2
+   Case cOp == "-"
+      nResultado := n1 - n2
+   Case cOp == "*"
+      nResultado := n1 * n2
+   Case cOp == "/"
+      If n2 == 0
+         Return .f.
+      Endif
+      nResultado := n1 / n2
+   Case cOp == "^"
+      nResultado := n1 ^ n2
+   Case cOp == "R"
+      If n1 < 0
+         Return .f.
+      Endif
+      nResultado := Sqrt(n1)
+   Otherwise
+      Return .f.
+   Endcase
 
-        CASE cOp == "^"
-            nResultado := n1 ^ n2
+Return nResultado
 
-        CASE cOp == "R"
-            IF n1 < 0
-            ENDIF
-            nResultado := Sqrt(n1)
+Function MostrarResultado(uResultado)
+   If Valtype(uResultado) == "L" .and. uResultado == .f.
+      Qout("Erro: Operacao invalida, calculo impossivel ou divisao por zero!")
+   Else
+      Qout("Resultado: " + Alltrim(Str(uResultado, 20, 2)))
+   Endif
 
-        OTHERWISE
-            RETURN .F. // Operação inválida
-    ENDCASE
+   Qout("")
+   Qout("Aperte qualquer tecla para fechar o console..")
+   Inkey(0)
 
-RETURN nResultado
-
-PROCEDURE MostrarResultado(uResultado)
-    IF ValType(uResultado) == "L" .AND. uResultado == .F.
-        QOut("Erro: Operacao invalida, calculo impossivel ou divisao por zero!")
-    ELSE
-        QOut("Resultado: " + AllTrim(Str(uResultado, 20, 2)))
-    ENDIF
-    QOut("")
-    QOut("Aperte qualquer tecla para fechar o console..")
-    Inkey(0)
-RETURN
+Return Nil

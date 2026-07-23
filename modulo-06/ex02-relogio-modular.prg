@@ -1,10 +1,10 @@
-PROCEDURE Main()
+Function Main()
     Local nInicio        := Seconds() 
     Local nDuracao       := 30
     Local cHoraBruta  
 	Local cHoraFormatada
 
-    DO WHILE (Seconds() - nInicio) < nDuracao
+    Do While (Seconds() - nInicio) < nDuracao
         
         cHoraBruta := ObterHora()
         cHoraFormatada := FormatarHora(cHoraBruta)
@@ -12,24 +12,24 @@ PROCEDURE Main()
 		
         Inkey(1) 
 		
-    ENDDO
+    EndDo
 
     QOut("")
     QOut("--- Execução finalizada após 30 segundos ---")
-RETURN
+Return Nil
 
-FUNCTION ObterHora()
-RETURN Time()
+Function ObterHora()
+Return Time()
 
-FUNCTION FormatarHora(cHora)
+Function FormatarHora(cHora)
 
 //PadC centraliza/garante o tamanho fixo
-RETURN PadC(AllTrim(cHora), 8)
+Return PadC(AllTrim(cHora), 8)
 
-PROCEDURE ExibirHora(cHora)
+Function ExibirHora(cHora)
     CLS
     QOut("===========================")
     QOut("   RELÓGIO DIGITAL HARBOUR ")
     QOut("          " + cHora        )
     QOut("===========================")
-RETURN
+Return Nil

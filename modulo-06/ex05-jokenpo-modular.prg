@@ -1,6 +1,6 @@
 Function Main()
-    LOCAL cJogadaUser, cJogadaCPU, cResultado
-    LOCAL cContinuar := "S"
+    Local cJogadaUser, cJogadaCPU, cResultado
+    Local cContinuar := "S"
 
     CLS
     Do While Upper(cContinuar) == "S"
