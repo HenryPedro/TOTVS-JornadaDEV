@@ -27,10 +27,9 @@ FUNCTION FormatarHora(cHora)
 RETURN PadC(AllTrim(cHora), 8)
 
 PROCEDURE ExibirHora(cHora)
-    ClearScreen()  // Limpa a tela a cada ciclo para o relógio não "rolar"
+    CLS
     QOut("===========================")
     QOut("   RELÓGIO DIGITAL HARBOUR ")
     QOut("          " + cHora        )
     QOut("===========================")
-	Inkey(0)
 RETURN

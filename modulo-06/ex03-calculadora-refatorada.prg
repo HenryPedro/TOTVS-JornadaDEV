@@ -1,9 +1,9 @@
 PROCEDURE Main()
 
-    LOCAL nNum1      := 0
-    LOCAL nNum2      := 0
-    LOCAL cOperacao  := ""
-    LOCAL uResultado := NIL
+    Local nNum1      := 0
+    Local nNum2      := 0
+    Local cOperacao  := ""
+    Local uResultado := NIL
 
     nNum1     := LerNumero("Digite o primeiro numero: ")
     cOperacao := LerOperacao()
@@ -18,17 +18,17 @@ PROCEDURE Main()
 RETURN
 
 FUNCTION LerNumero(cMensagem)
-    LOCAL cInput := ""
+    Local cInput := ""
     ACCEPT cMensagem TO cInput
 RETURN Val(cInput)
 
 FUNCTION LerOperacao()
-    LOCAL cOp := ""
+    Local cOp := ""
     ACCEPT "Digite a operacao (+, -, *, /, ^, R): " TO cOp
 RETURN Upper(AllTrim(cOp))
 
 FUNCTION Calcular(n1, n2, cOp)
-    LOCAL nResultado := 0
+    Local nResultado := 0
 
     DO CASE
         CASE cOp == "+"
@@ -66,4 +66,7 @@ PROCEDURE MostrarResultado(uResultado)
     ELSE
         QOut("Resultado: " + AllTrim(Str(uResultado, 20, 2)))
     ENDIF
+    QOut("")
+    QOut("Aperte qualquer tecla para fechar o console..")
+    Inkey(0)
 RETURN
